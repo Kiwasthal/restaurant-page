@@ -1,7 +1,6 @@
-import CustomSvg from './gelaccio.svg'
+import Icon from './gelaccio.svg'
 
-
-appendingMain = () => {
+const appendingMain = () => {
 
 const container = document.getElementById('content');
 const iceCream = document.createElement('div');
@@ -26,10 +25,10 @@ container.appendChild(leftBar);
 
 const handwritten = document.createElement('div');
 handwritten.classList.add('handwritten');
-const myIcon = new CustomSvg();
-myIcon.src = CustomSvg;
+const myIcon = new Icon();
+myIcon.src = Icon;
 handwritten.appendChild(myIcon);
-container.appendChild(handwritten)
+container.appendChild(handwritten);
 
 const buttonModal = document.createElement('div');
 buttonModal.classList.add('button-modal')
@@ -41,3 +40,6 @@ const btnThree = document.createElement('div');
 btnThree.classList.add('button-three');
 
 }
+
+
+export {appendingMain}
