@@ -1,4 +1,4 @@
-import Icon from './gelaccio.svg'
+import Icon from './icon.svg'
 
 const appendingMain = () => {
 
@@ -10,6 +10,7 @@ container.appendChild(iceCream);
 
 const imageWrapper = document.createElement('div');
 imageWrapper.classList.add('image-container');
+container.appendChild(imageWrapper);
 
 
 const leftBar = document.createElement('div');
@@ -38,6 +39,10 @@ const btnTwo = document.createElement('div');
 btnTwo.classList.add('button-two');
 const btnThree = document.createElement('div');
 btnThree.classList.add('button-three');
+buttonModal.appendChild(btnOne);
+buttonModal.appendChild(btnTwo);
+buttonModal.appendChild(btnThree);
+container.appendChild(buttonModal);
 
 }
 

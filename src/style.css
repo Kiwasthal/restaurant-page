@@ -9,7 +9,8 @@ body {
     width: 100vw;
 }
 
-.container {
+
+#content {
     display: grid;
     grid-template-columns: 4vw 30vw 1fr 1fr 1fr 1fr;
     grid-template-rows: 20vh 22.5vh 26.25vh 26.25vh 5vh;
@@ -89,7 +90,7 @@ svg {
 .image-container {
     z-index: 1000;
     grid-area: 2 / 2 / 5 / 4; 
-    background: url(photo-1563804717463-0ac6206d05ca.avif);
+    background: url(ice-cream-shop.avif);
     background-repeat: no-repeat;
 }
 
