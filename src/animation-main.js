@@ -5,6 +5,10 @@ const delay = () => {
     document.querySelector('.button-modal').classList.add('extending');
     document.querySelector('.button-one').classList.add('extOne');
     document.querySelector('.button-two').classList.add('extTwo');
-    document.querySelector('.button-three').classList.add('extThree')
+    document.querySelector('.button-three').classList.add('extThree');
+    document.querySelector('.ballTwo').classList.add('revealing')
+    document.querySelectorAll('a').forEach(a => a.classList.add('revealing'));
+    document.querySelectorAll('a').forEach(a => a.classList.add('revealing'));
+    document.querySelectorAll('span').forEach(a => a.classList.add('revealing'));
     document.querySelector('.text-container').classList.add('fade');
 };

@@ -22,6 +22,21 @@ body {
 
 }
 
+.ballTwo {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 1000px;
+    z-index: 1000;
+    background: linear-gradient(90deg , white 50%, rgb(255, 166, 0) 100%);
+    background-color: rgba(233, 178, 13, 0.6);
+    transition: 3500ms ease-in-out;
+    opacity: 0;
+    filter: drop-shadow(2px 2px 10px rgb(194, 175, 91));
+}
+
 .left-modal-one {
     background-color: #0f160c;
     width: 1vw;
@@ -132,11 +147,32 @@ svg {
 .text-container {
     grid-area: 2 / 4 / 3 / 6;
     align-self: center;
-    z-index: 1000;
+    z-index: 1004;
     font-size: 40px;
-    color: #ddcfbe;
     opacity: 0;
-    transition: 4500ms;
+    transition: 3500ms;
+    background: linear-gradient(90deg ,rgb(255, 166, 0) 50% , white 100%);
+}
+
+.textOne , .textTwo {
+
+    padding: 1vh 1vh 0vh 1vh;
+    border-left: 2px solid rgb(255, 166, 0);
+    border-right: 2px solid rgb(255, 166, 0);
+    text-align: start;
+    width: 40%;
+}
+
+.textOne {
+    color :rgb(255, 166, 0);
+    border-top: 2px solid rgb(255, 166, 0);
+    font-size: 2rem;
+}
+
+.textTwo {
+    border-bottom: 2px solid rgb(255, 166, 0);
+    font-size: 3rem;
+    color: white;
 }
 
 .fade {
@@ -144,9 +180,10 @@ svg {
 }
 
 .image-container {
-    z-index: 1000;
+    z-index: 1002;
     grid-area: 2 / 2 / 5 / 4; 
     background: url(ice-cream-shop.avif);
+    filter: drop-shadow(4px 0px 3px #cdad8f);
     background-repeat: no-repeat;
 }
 
@@ -165,12 +202,45 @@ img {
 }
 
 .button-one, .button-two, .button-three  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     border-top-right-radius: 20px;
-     width: 0;
-     background: linear-gradient(#d8d5d0 50% , #be8142 100%);
-     transition: 1500ms ease-in-out;
+    width: 0;
+    background: linear-gradient(#d8d5d0 50% , #be8142 100%);
+    transition: 1500ms ease-in-out;
+    z-index: 1001;
     
 }
+
+a {
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: 600;
+    font-size: 20px;
+    background: linear-gradient(#d8d5d0 50% , #cfb8a0 100%);
+    opacity: 0;
+    transition: 4500ms;
+    z-index: 1004;
+}
+
+.revealing {
+    opacity: 1;
+}
+
+
+
+a span {
+    opacity: 0;
+    background: linear-gradient(#d8d5d0 50% , #d4cabc 100%);
+    z-index: 1004;
+}
+
 
 .button-two {
     background-color: #be8142;
@@ -185,15 +255,15 @@ img {
 }
 
 .extOne {
-    width: 80%;
+    width: 50%;
 }
 
 .extTwo {
-    width: 90%;
+    width: 55%;
 }
 
 .extThree {
-    width: 100%;
+    width: 60%;
 }
 
 .image-container {
