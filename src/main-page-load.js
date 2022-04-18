@@ -26,9 +26,12 @@ container.appendChild(leftBar);
 
 const handwritten = document.createElement('div');
 handwritten.classList.add('handwritten');
-const mySvg = new Image();
-mySvg.src = gelsvg;
-handwritten.appendChild(mySvg);
+function component() {
+    const element = document.createElement('div')
+    element.innerHTML = gelsvg;
+    return element
+}
+handwritten.appendChild(component())
 container.appendChild(handwritten);
 
 const buttonModal = document.createElement('div');
