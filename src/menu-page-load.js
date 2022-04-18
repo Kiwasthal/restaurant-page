@@ -18,7 +18,7 @@ let populateMenu = () => {
         const element = document.createElement('div');
         element.innerHTML = path
         return element
-    }
+    };
     menuContent.appendChild(iceCreamSvgCreator(ICone));
     menuContent.appendChild(iceCreamSvgCreator(ICtwo));
     menuContent.appendChild(iceCreamSvgCreator(ICthree));
