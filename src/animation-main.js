@@ -9,6 +9,6 @@ const delay = () => {
     document.querySelector('.ballTwo').classList.add('revealing')
     document.querySelectorAll('a').forEach(a => a.classList.add('revealing'));
     document.querySelectorAll('a').forEach(a => a.classList.add('revealing'));
-    document.querySelectorAll('span').forEach(a => a.classList.add('revealing'));
+    document.querySelectorAll('button').forEach(a => a.classList.add('revealing'));
     document.querySelector('.text-container').classList.add('fade');
 };

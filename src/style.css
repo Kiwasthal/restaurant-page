@@ -65,7 +65,7 @@ body {
 }
 
 
- .handwritten .svg {
+.handwritten .svg {
     position: absolute;
     height: 30vh;
     width: 100vh;
@@ -217,33 +217,68 @@ img {
     
 }
 
-a {
-    margin-right: 20px;
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    align-items: center;
-    text-decoration: none;
-    border: 2px solid black;
-    font-weight: 600;
-    font-size: 20px;
-    background: linear-gradient(#d8d5d0 50% , #cfb8a0 100%);
-    opacity: 0;
-    transition: 4500ms;
-    z-index: 1004;
-}
 
+
+button {
+    position: relative;
+    display:block;
+    height: 45px;
+    width: 150px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #383736;
+    border: 2px #383736 solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  
+  button:hover {
+    color: whitesmoke;
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    background: #383736;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.09s ease-in;
+  }
+  
+  button:hover:before {
+    top: 0;
+  }
+
+  .menuBtn , .contactBtn {
+      opacity: 0;
+  }
+  
+ 
 .revealing {
     opacity: 1;
 }
 
 
 
-a span {
-    opacity: 0;
-    background: linear-gradient(#d8d5d0 50% , #d4cabc 100%);
-    z-index: 1004;
-}
+
+
+
 
 
 .button-two {
@@ -304,27 +339,36 @@ a span {
 
   /* Menu page styling */
 
-  .menuContent {
+.menuContent {
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 10vh 1fr 1fr;
       justify-items: center;
-      gap: 2vh;
+      gap: 4vh;
   }
 
-  .menuHeader {
+h1 {
+    background-color: rgb(197, 177, 66);
+    text-shadow: 2px 2px 2px black;
+}
+
+
+.menuHeader {
+    background-color: rgb(197, 177, 66);
       grid-area: 1 / 1 / 2 / 5 ;
+      height: 100%;
       display: flex;
       align-self: center;
-      padding-bottom: 2vh;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
       color: white;
       width: 100%;
-      border-bottom: 2px double orange;
+      border-bottom: 2px solid white;
   }
+
   
-  svg:not(#written  ) {
+svg:not(#written  ) {
       width: 10vw;
       height: 10vw;
       padding: 5vh;
@@ -335,7 +379,7 @@ a span {
 
 
 
-  svg:not(#written):hover {
+svg:not(#written):hover {
       animation: shake 0.5s ease-in-out;
       animation-iteration-count: infinite;
       z-index: 1000;
@@ -358,5 +402,65 @@ a span {
     90% { transform: translate(1px, 2px) rotate(0deg) scale(1.1); }
     100% { transform: translate(1px, -2px) rotate(-1deg) scale(1.1); }
   }
+
+.decorBallOne , .decorBallTwo, .decorBallThree, .decorBallFour {
+    position: absolute;
+    height: 40vh;
+    width: 40vh;
+    background-color: rebeccapurple;
+  }
+
+.decorBallOne {
+    bottom: 0%;
+    left: 12%;
+    width: 320px;
+    height: 160px; /* as the half of the width */
+    background:url(./assets/decor-first.jpg);
+    background-size: cover;
+    border-top-left-radius: 170px;  
+    border-top-right-radius: 170px; 
+    border: 10px solid yellow;
+    border-bottom: 0;
+}
+
+.decorBallTwo {
+    bottom: 0%;
+    left: 32%;
+    width: 320px;
+    height: 160px; /* as the half of the width */
+    background:url(./assets/decor-second.jpg);
+    background-size:cover;
+    border-top-left-radius: 170px;  
+    border-top-right-radius: 170px; 
+    border: 10px solid yellow;
+    border-bottom: 0;
+}
+
+.decorBallThree {
+    bottom: 0%;
+    left: 52%;
+    width: 320px;
+    height: 160px; 
+    background:url(./assets/decor-three.jpg);
+    background-size:cover;
+    border-top-left-radius: 170px;  
+    border-top-right-radius: 170px; 
+    border: 10px solid yellow;
+    border-bottom: 0;
+}
+
+.decorBallFour {
+    bottom: 0%;
+    left: 72%;
+    width: 320px;
+    height: 160px; 
+    background:url(./assets/decor-four.jpg);
+    background-size:cover;
+    border-top-left-radius: 170px;  
+    border-top-right-radius: 170px; 
+    border: 10px solid yellow;
+    border-bottom: 0;
+}
+
 
 
