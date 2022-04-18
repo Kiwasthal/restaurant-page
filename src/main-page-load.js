@@ -1,23 +1,20 @@
-import gelsvg from './gelsvg.svg'
+import gelsvg from './gelsvg.svg';
 
 const appendingMain = () => {
 
 const container = document.getElementById('content');
-const iceBall = document.createElement('div')
-iceBall.classList.add('ballOne')
-container.appendChild(iceBall);
-const iceBallTwo = document.createElement('div')
+const iceBallTwo = document.createElement('div');
 iceBallTwo.classList.add('ballTwo');
 container.appendChild(iceBallTwo);
 const iceCream = document.createElement('div');
-iceCream.classList.add('text-container')
+iceCream.classList.add('text-container');
 const firstLine = document.createElement('div');
-firstLine.classList.add('textOne')
+firstLine.classList.add('textOne');
 firstLine.textContent = "Ice Cream";
 iceCream.appendChild(firstLine);
 const secondLine = document.createElement('div');
 secondLine.textContent = "Time";
-secondLine.classList.add('textTwo')
+secondLine.classList.add('textTwo');
 iceCream.appendChild(secondLine)
 container.appendChild(iceCream);
 
@@ -43,7 +40,8 @@ function component() {
     const element = document.createElement('div');
     element.innerHTML = gelsvg;
     return element;
-}
+};
+
 handwritten.appendChild(component());
 container.appendChild(handwritten);
 
@@ -52,16 +50,16 @@ buttonModal.classList.add('button-modal');
 const btnOne = document.createElement('div');
 btnOne.classList.add('button-one');
 const linkFirst = document.createElement('a');
-linkFirst.classList.add('menuBtn')
+linkFirst.classList.add('menuBtn');
 const spanFirst = document.createElement('span');
 linkFirst.appendChild(spanFirst);
-spanFirst.textContent = "MENU"
+spanFirst.textContent = "MENU";
 btnOne.appendChild(linkFirst); 
 const btnTwo = document.createElement('div');
 btnTwo.classList.add('button-two');
 const linkSecond = document.createElement('a');
 const spanSecond = document.createElement('span');
-spanSecond.textContent = "CONTACT"
+spanSecond.textContent = "CONTACT";
 linkSecond.appendChild(spanSecond);
 btnTwo.appendChild(linkSecond); 
 const btnThree = document.createElement('div');
@@ -78,4 +76,4 @@ container.appendChild(buttonModal);
 }
 
 
-export {appendingMain}
+export {appendingMain};
