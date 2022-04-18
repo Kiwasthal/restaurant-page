@@ -307,16 +307,22 @@ a span {
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 10vh 1fr 1fr;
       justify-items: center;
       gap: 2vh;
   }
 
+  .menuHeader {
+      grid-area: 1 / 1 / 2 / 5 ;
+      padding: 1vh;
+      color: white;
+  }
+  
   svg:not(#written  ) {
       width: 10vw;
       height: 10vw;
       padding: 5vh;
-      transform: 500ms;
+      transition: 200ms ease-out;
       position: relative;
   }
 
@@ -345,4 +351,5 @@ a span {
     90% { transform: translate(1px, 2px) rotate(0deg) scale(1.1); }
     100% { transform: translate(1px, -2px) rotate(-1deg) scale(1.1); }
   }
+
 

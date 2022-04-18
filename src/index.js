@@ -4,13 +4,41 @@ import './style.css';
 import {emptyContent} from './empty-content';
 import {populateMenu} from './menu-page-load';
 
-appendingMain();
-setTimeout(delay, 4800)
-let menuBtn = document.querySelector('.menuBtn').addEventListener('click', () => {
+
+const eventHandler = (() => {
+
+    appendingMain();
+
+    setTimeout(delay, 4800);
+
     let container = document.getElementById('content');
-    emptyContent(container);
-    container.style.display = "flex"
-    populateMenu();
-})
+
+    let createMenu = () => {
+        emptyContent(container);
+        container.style.display = "flex";
+        populateMenu();
+        document.querySelector('.returnMain').addEventListener('click',eventHandler.createMain);
+    }
+
+    let createMain = () => {
+        emptyContent(container);
+        container.style.display = "grid";
+        appendingMain();
+        setTimeout(delay, 4800);
+        document.querySelector('.menuBtn').addEventListener('click',eventHandler.createMenu); 
+    }
+
+    return {
+        createMenu,
+        createMain,
+    }
+
+
+})();
+
+document.querySelector('.menuBtn').addEventListener('click',eventHandler.createMenu);
+document.querySelector('.returnMain').addEventListener('click',eventHandler.createMain);
+
+
 
 
