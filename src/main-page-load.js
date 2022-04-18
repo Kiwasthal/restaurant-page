@@ -61,6 +61,7 @@ const btnTwo = document.createElement('div');
 btnTwo.classList.add('button-two');
 const linkSecond = document.createElement('a');
 const spanSecond = document.createElement('span');
+spanSecond.textContent = "CONTACT"
 linkSecond.appendChild(spanSecond);
 btnTwo.appendChild(linkSecond); 
 const btnThree = document.createElement('div');

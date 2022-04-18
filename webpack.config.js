@@ -11,16 +11,16 @@ module.exports = {
     module: {
         rules: [
           { test: /\.svg$/,
-           loader: 'svg-inline-loader' 
-          },
-          {
-            test: /\.(png|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
-          },
-          {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
+          loader: 'svg-inline-loader' 
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
         ],
       },
 };
