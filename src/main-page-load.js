@@ -1,4 +1,4 @@
-import Icon from './icon.svg'
+import gelsvg from './gelsvg.svg'
 
 const appendingMain = () => {
 
@@ -26,9 +26,9 @@ container.appendChild(leftBar);
 
 const handwritten = document.createElement('div');
 handwritten.classList.add('handwritten');
-const myIcon = new Icon();
-myIcon.src = Icon;
-handwritten.appendChild(myIcon);
+const mySvg = new Image();
+mySvg.src = gelsvg;
+handwritten.appendChild(mySvg);
 container.appendChild(handwritten);
 
 const buttonModal = document.createElement('div');

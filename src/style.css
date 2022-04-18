@@ -45,33 +45,89 @@ body {
 .handwritten {
     transition: all 1s ease;
     transition-delay: 1s;
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 1/3;
     z-index: 999;
-
 }
 
 
-svg {
+ .handwritten .svg {
     position: absolute;
-    top: -10%;
-    height: 50vh;
-    left: -10%;
+    height: 30vh;
+    width: 100vh;
     z-index: 999;
     
 }
-
-.text {
-    stroke-dasharray: 1500; 
-    stroke-dashoffset: 1500;
-    animation: animate 5s linear 1s forwards;
+svg {
+    position: absolute;
+    top: 5%;
+    left: -60%;
+    width: auto;
+    height: 12vh;
+    left: 10%;
+    z-index: 1000;   
 }
 
-.path {
-    stroke-dasharray: 1000; 
+.mask {
+    fill: none;
+    stroke: rgb(184, 32, 32);
+}
+
+
+.mask {
+    stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: animate 3500ms linear 4500ms both;
-}
+  }
+  
+  @keyframes strokeOffset {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+
+  #Mask-gelaccio-Gmain {
+    animation: strokeOffset 1s linear forwards;
+  }
+
+  #Mask-gelaccio-Gsub {
+    animation: strokeOffset 2s linear forwards 0.5s;
+  }
+
+  #Mask-gelaccio-e {
+    animation: strokeOffset 1s linear forwards 1s; 
+  }
+
+  #Mask-gelaccio-l {
+    animation: strokeOffset 1s linear forwards 1.5s; 
+  }
+
+  #Mask-gelaccio-a {
+    animation: strokeOffset 1s linear forwards 2s; 
+  }
+
+  #Mask-gelaccio-c {
+    animation: strokeOffset 1s linear forwards 2.5s; 
+  }
+
+  #Mask-gelaccio-cc {
+    animation: strokeOffset 1s linear forwards 3s; 
+  }
+
+  #Mask-gelaccio-imain {
+    animation: strokeOffset 1s linear forwards 3.5s; 
+  }
+
+
+  #Mask-gelaccio-o {
+    animation: strokeOffset 1s linear forwards 4.0s; 
+  }
+
+  #Mask-gelaccio-isub {
+    animation: strokeOffset 2s linear forwards 4.7s; 
+  }
+
+
 
 .text-container {
     grid-area: 2 / 4 / 3 / 6;
@@ -94,10 +150,10 @@ svg {
     background-repeat: no-repeat;
 }
 
-img {
+/* img {
     z-index: 1000;
     grid-area: 2 / 2 / 5 / 3;
-}
+} */
 
 .button-modal {
     grid-area: 3 / 3 / 5 / 6;
@@ -170,4 +226,4 @@ img {
   @-ms-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-  }
+  } 

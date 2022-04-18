@@ -1,8 +1,10 @@
 import { appendingMain } from './main-page-load';
+import {delay} from './animation-main';
+import {animate} from './animation.js';
 import './style.css';
-import {delay} from './animation-main'
 
 appendingMain();
-let dropTimer = setTimeout(delay, 4800)
+animate();
+setTimeout(delay, 4800)
 
 
