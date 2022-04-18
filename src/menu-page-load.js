@@ -20,7 +20,7 @@ let populateMenu = () => {
     const menuTitle = document.createElement('h1');
     menuTitle.textContent = "Choose Your Flavor!";
     const contractBtn = document.createElement('button');
-    contractBtn.classList = "contract"
+    contractBtn.classList = "contactBtn"
     contractBtn.textContent = "CONTRACT"
     header.appendChild(returnBtn);
     header.appendChild(menuTitle);

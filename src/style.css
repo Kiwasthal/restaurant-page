@@ -354,7 +354,7 @@ h1 {
 }
 
 
-.menuHeader {
+.menuHeader, .contactHeader {
     background-color: rgb(197, 177, 66);
       grid-area: 1 / 1 / 2 / 5 ;
       height: 100%;
@@ -461,6 +461,23 @@ svg:not(#written):hover {
     border: 10px solid yellow;
     border-bottom: 0;
 }
+
+/* Contact page layout */
+
+.contactContainer {
+    display: grid;
+    grid-template-rows: 10vh 1fr 20vh;
+    width: 100%;
+    height: 100%;
+}
+
+.contactHeader .menuBtn, .menuHeader .contactBtn {
+    opacity: 1;
+}
+
+
+
+
 
 
 
