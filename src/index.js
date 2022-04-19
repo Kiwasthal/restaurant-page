@@ -3,7 +3,7 @@ import {delay} from './animation-main';
 import './style.css';
 import {emptyContent} from './empty-content';
 import {populateMenu} from './menu-page-load';
-import {appendingContact} from './contant-page-load';
+import {appendingContact} from './contact-page-load';
 
 
 const eventHandler = (() => {

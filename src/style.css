@@ -464,6 +464,7 @@ svg:not(#written):hover {
 
 /* Contact page layout */
 
+
 .contactContainer {
     display: grid;
     grid-template-rows: 10vh 1fr 20vh;
@@ -475,6 +476,19 @@ svg:not(#written):hover {
     opacity: 1;
 }
 
+
+.contactInfo {
+  padding: 2vh;
+  grid-area: 2 / 1 / 3 / 5;
+  justify-items: center;
+  text-align: center;
+  color: white;
+}
+
+h3 {
+  padding: 2vh;
+  font-size: 1.25rem;
+}
 
 
 
