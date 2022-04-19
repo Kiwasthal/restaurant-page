@@ -34,7 +34,58 @@ const appendingContact = () => {
 
     const fill = document.createElement('p');
     fill.textContent = 'You can still fill this form for reasons.';
-    contactInfo.appendChild(fill)
+    contactInfo.appendChild(fill);
+
+    const formContainer = document.createElement('div');
+    formContainer.classList.add('form-container');
+
+    const form = document.createElement('form');
+    form.id = 'main-form';
+    formContainer.appendChild(form)
+
+    const formContentName = document.createElement('div');
+    formContentName.classList.add('form-one');
+
+    const inputName = document.createElement('input');
+    inputName.type = 'text';
+    inputName.id = 'first-name';
+    inputName.name = 'user-first-name';
+    inputName.placeholder = ' ';
+
+    const nameLabel = document.createElement('label');
+    nameLabel.for = 'first-name';
+    nameLabel.textContent = 'NAME'
+
+
+    formContentName.appendChild(inputName);
+    formContentName.appendChild(nameLabel);
+
+    const formContentMail = document.createElement('div');
+    formContentMail.classList.add('form-two');
+
+    const inputMail = document.createElement('input');
+    inputMail.type = 'email';
+    inputMail.id = 'email';
+    inputMail.name = 'user-mail';
+    inputMail.placeholder = ' ';
+
+    const mailLabel = document.createElement('label');
+    mailLabel.for = 'email';
+    mailLabel.textContent = 'EMAIL';
+
+    const submitBtn = document.createElement('button');
+    submitBtn.classList = "submit"
+    submitBtn.textContent = "SUBMIT"
+    
+
+    formContentMail.appendChild(inputMail);
+    formContentMail.appendChild(mailLabel);
+
+    
+    formContainer.appendChild(formContentName);
+    formContainer.appendChild(formContentMail);
+    formContainer.appendChild(submitBtn);
+    contactInfo.appendChild(formContainer);
 
 
 
